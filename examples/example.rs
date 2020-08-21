@@ -16,3 +16,9 @@ fn here(args: String) -> String {
 fn returns_arg() {
 	assert!(true)
 }
+
+#[test]
+#[should_panic]
+fn it_works() {
+	assert!(false);
+}
