@@ -12,31 +12,20 @@ fn main() {
 }
 
 
-//#![feature(todo_macro)]
-//
-//trait Foo {
-//    fn bar(&self);
-//    fn baz(&self);
-//}
-//
-//struct MyStruct;
-//
-//impl Foo for MyStruct {
-//	fn bar(&self) {
-//		// implementation goes here
-//	}
-//
-//	fn baz(&self) {
-//		// let's not worry about implementing baz() for now
-//		todo!();
-//	}
-//}
-//
-//
-//fn main() {
-//	println!("Hello, world!");
-//	let s = MyStruct;
-//	s.bar();
-//
-//	// we aren't even using baz() yet, so this is fine.
-//}
+trait Foo {
+   fn bar(&self);
+   fn baz(&self) -> i32;
+}
+
+struct MyStruct;
+
+impl Foo for MyStruct {
+	fn bar(&self) {
+		// implementation goes here
+	}
+
+	fn baz(&self) -> i32 {
+		// let's not worry about implementing baz() for now
+		todo!()
+	}
+}
